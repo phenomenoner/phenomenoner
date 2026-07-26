@@ -2,11 +2,11 @@
 
 **Quant / Algo Trading / AI Harness Engineering** — Taipei (25°N, 121°E)
 
-> 我做 AI agent 的基礎建設：收據、權限、斷路器——讓自主系統上線之後，大家都睡得著覺。
+> 我做 AI agent 的基礎建設，上線之後睡得著覺的那種。
 >
-> I build infrastructure for AI agents — receipts, permissions, and circuit breakers — so you can ship autonomy and still sleep at night.
+> I build AI agent infrastructure — the kind that lets you sleep at night.
 
-我從量化交易圈過來。錢在線上跑的系統會逼你養成一些好習慣：副作用要留收據、權限預設關閉、模型只負責思考、人握著斷路器。這些習慣，我每個專案都照做。
+量化交易出身。錢在線上跑的系統會逼你養成一些好習慣：動手前先留紀錄、權限預設關閉、模型只負責思考、方向盤永遠在人手上。這些習慣，我每個專案都照做。
 
 ---
 
@@ -14,32 +14,32 @@
 
 | 你想看的是… | 去這裡 |
 |---|---|
-| 🦀 一個 agent 框架可以多「無聊」而可靠（Rust、6 個依賴、1,200+ 測試） | [agent-harness-core](https://github.com/phenomenoner/agent-harness-core) |
-| 🧠 AI 記憶怎麼做到有出處、可還原 | [openclaw-mem](https://github.com/phenomenoner/openclaw-mem) |
-| 🔗 不同框架的 agents 怎麼非同步共享知識 | [a2a-superhub](https://github.com/phenomenoner/a2a-superhub) |
-| 📈 AI 出主意、人做決定的當沖交易架構 | [steamer-card-engine](https://github.com/phenomenoner/steamer-card-engine) |
-| 🤝 怎麼把散落的領域知識整理成 AI 能照著做的 skill | [neoapi-skill](https://github.com/phenomenoner/neoapi-skill) |
+| 🦀 一個 agent 框架可以多「無聊」而可靠（Rust、6 個依賴、1,200+ 測試不用呼叫模型） | [agent-harness-core](https://github.com/phenomenoner/agent-harness-core) |
+| 🧠 AI 的記憶怎麼做到每筆有出處、改壞了退得回去 | [openclaw-mem](https://github.com/phenomenoner/openclaw-mem) |
+| 🔗 不同家的 agents 怎麼合作，離線了還能自己補課 | [a2a-superhub](https://github.com/phenomenoner/a2a-superhub) |
+| 📈 AI 出主意、人做決定的台股當沖架構 | [steamer-card-engine](https://github.com/phenomenoner/steamer-card-engine) |
+| 🤝 怎麼把一整套領域知識整理成 AI 能照著做的 skill | [neoapi-skill](https://github.com/phenomenoner/neoapi-skill) |
 
 ## 🚀 What I Build
 
-| 專案 | 一句話 | 核心想法 |
+| 專案 | 在做什麼 | 招牌亮點 |
 |---|---|---|
-| [**agent-harness-core**](https://github.com/phenomenoner/agent-harness-core) ![stars](https://img.shields.io/github/stars/phenomenoner/agent-harness-core?style=flat&logo=github&label=%E2%98%85) | 自架 AI agent runtime（Rust）：佇列、權限、稽核、跨重啟的 session 接續 | 無聊是刻意的，可靠才是重點 |
-| [**openclaw-mem**](https://github.com/phenomenoner/openclaw-mem) ![stars](https://img.shields.io/github/stars/phenomenoner/openclaw-mem?style=flat&logo=github&label=%E2%98%85) | AI 記憶治理層：出處、信任政策、trace 收據、可還原 | 記憶不用最大，但要說得出來源 |
-| [**a2a-superhub**](https://github.com/phenomenoner/a2a-superhub) ![stars](https://img.shields.io/github/stars/phenomenoner/a2a-superhub?style=flat&logo=github&label=%E2%98%85) | Agent-to-agent 協調中樞：任務生命週期 + Markdown 為本的共享記憶 | 每個 agent 都是同事，不是下屬 |
-| [**hermes-agent-harness-plus**](https://github.com/phenomenoner/hermes-agent-harness-plus) ![stars](https://img.shields.io/github/stars/phenomenoner/hermes-agent-harness-plus?style=flat&logo=github&label=%E2%98%85) | Agent 工具箱：任務畫布、證據追蹤、本地語意搜尋 | 結論要拿得出證據 |
-| [**neoapi-skill**](https://github.com/phenomenoner/neoapi-skill) ![stars](https://img.shields.io/github/stars/phenomenoner/neoapi-skill?style=flat&logo=github&label=%E2%98%85) | 台股富邦 Neo API 的 AI skill：13 條防呆守則、測試/正式環境隔離 | 先讀文件，再下單 |
-| [**steamer-card-engine**](https://github.com/phenomenoner/steamer-card-engine) ![stars](https://img.shields.io/github/stars/phenomenoner/steamer-card-engine?style=flat&logo=github&label=%E2%98%85) | 台股當沖策略 runtime：策略卡只表達意圖，不直接碰券商下單 | AI 出主意，人做決定 |
+| [**agent-harness-core**](https://github.com/phenomenoner/agent-harness-core) ![stars](https://img.shields.io/github/stars/phenomenoner/agent-harness-core?style=flat&logo=github&label=%E2%98%85) | 大多數 agent 框架只管「怎麼想」，這個專門管「怎麼上線」：進線、權限、佇列、投遞、稽核、跨重啟接續，一手包 | Rust 寫的，6 個依賴、沒有 async runtime；1,200+ 測試全程不用呼叫模型，Telegram / Discord 直接接 |
+| [**openclaw-mem**](https://github.com/phenomenoner/openclaw-mem) ![stars](https://img.shields.io/github/stars/phenomenoner/openclaw-mem?style=flat&logo=github&label=%E2%98%85) | AI 記憶的治理層：每筆記憶有出處、被排除有理由，改壞了退得回去 | 不跟人比 recall 分數，比「說得出為什麼」——同一份記憶、同一個查詢，換個信任政策就給出不同的受控結果，全程有紀錄可查 |
+| [**a2a-superhub**](https://github.com/phenomenoner/a2a-superhub) ![stars](https://img.shields.io/github/stars/phenomenoner/a2a-superhub?style=flat&logo=github&label=%E2%98%85) | 不同框架的 agents 一起做事的協調中樞：任務生命週期、artifacts、共享記憶 | 週一早上你跟 agent A 講的事，週四凌晨 agent B 醒來自己讀到，出處齊全——記憶用 Markdown 存，Obsidian 打得開、git 管得住 |
+| [**hermes-agent-harness-plus**](https://github.com/phenomenoner/hermes-agent-harness-plus) ![stars](https://img.shields.io/github/stars/phenomenoner/hermes-agent-harness-plus?style=flat&logo=github&label=%E2%98%85) | 長 session 工作的工具箱：任務畫布、證據自動摘要、本地語意搜尋 | 重要發現不再被洗進 scrollback 深處；資料全部留在 127.0.0.1，要動手前都先給你 dry-run 預覽 |
+| [**neoapi-skill**](https://github.com/phenomenoner/neoapi-skill) ![stars](https://img.shields.io/github/stars/phenomenoner/neoapi-skill?style=flat&logo=github&label=%E2%98%85) | 把富邦 Neo API 的官方文件跟實戰經驗，做成 AI 能照著做的交易工作流程 | 13 條防呆守則、測試/正式環境嚴格分離、附離線文件快照；Codex / Claude / Gemini 都能直接用 |
+| [**steamer-card-engine**](https://github.com/phenomenoner/steamer-card-engine) ![stars](https://img.shields.io/github/stars/phenomenoner/steamer-card-engine?style=flat&logo=github&label=%E2%98%85) | 台股當沖策略 runtime：策略卡只表達「想做什麼」，不直接碰券商下單 | 停損、強制平倉、緊急煞車是架構內建不是選配；回放驗證是一級需求，策略改了可以回頭對答案 |
 
 ## ⚙️ 我寫系統的五個習慣 How I Build
 
-Demo 誰都會做，我比較在意出事之後，查不查得到原因。這五個習慣，我每個專案都照做：
+Demo 誰都會做，我比較在意出事之後，查不查得到原因。用大白話講：
 
-1. **Receipts over trust** — 有副作用的事，先把意圖跟結果寫進帳本再做。真的出事了，翻紀錄就能還原現場。
-2. **Deterministic first** — 權限、排程、佇列交給普通程式碼就好，模型只負責思考。該確定的地方，不要有驚喜。
-3. **Fail-closed** — 白名單沒設、身分沒綁、憑證不在，系統就什麼都不做。安全是預設值，不是之後才補的。
-4. **Local-first, boring tech** — SQLite、JSONL、Markdown、同步 Rust、依賴越少越好。無聊的技術出問題好追，也活得比較久。
-5. **Humans hold the breaker** — AI 可以寫策略、跑驗證、做回放分析，但按下 live 那顆按鈕的，永遠是人。
+1. **Receipts over trust｜先記帳，再動手** — 系統要做任何會留下影響的事，先寫下「我要做什麼」，做完再記「發生了什麼」。哪天出包，翻本子就知道來龍去脈。
+2. **Deterministic first｜該規矩的地方就規矩** — 開門、排隊、看時鐘這種事，交給一板一眼的程式來做，AI 只負責出腦力。
+3. **Fail-closed｜門禁預設是關的** — 名單上沒有你，門就不會開。不是先放進來、出事再想辦法擋。
+4. **Local-first, boring tech｜資料放家裡，工具挑耐用的** — SQLite、JSONL、Markdown、同步 Rust。無聊的技術出問題好追，也活得比較久。
+5. **Humans hold the breaker｜方向盤在人手上** — AI 可以提案、試算、複盤，但真正按下去的那一下，永遠是人。
 
 ## 🛠️ Stack
 
@@ -54,8 +54,9 @@ Demo 誰都會做，我比較在意出事之後，查不查得到原因。這五
 
 ## 📫 Connect
 
-- GitHub: [@phenomenoner](https://github.com/phenomenoner)
-- Email: phenomenoner@gmail.com
+- 🌐 個人網站 Website: [phenomenoner.github.io](https://phenomenoner.github.io)
+- 💻 GitHub: [@phenomenoner](https://github.com/phenomenoner)
+- ✉️ Email: phenomenoner@gmail.com
 
-*Agent 基礎設施、記憶治理、交易系統，或任何想把 AI 做得更可靠的題目，都歡迎找我聊。*
-*Open to collaboration on agent infrastructure, memory governance, and trading systems engineering.*
+*對 agent 基礎設施、記憶治理或交易系統有興趣，歡迎來聊聊。*
+*Into agent infrastructure, memory governance, or trading systems? Come say hi.*
