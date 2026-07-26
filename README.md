@@ -27,7 +27,7 @@
 | [**agent-harness-core**](https://github.com/phenomenoner/agent-harness-core) | 大多數 agent 框架只管「怎麼想」，這個專門管「怎麼上線」：進線、權限、佇列、投遞、稽核、跨重啟接續，一手包 | Rust 寫的，6 個依賴、沒有 async runtime；1,200+ 測試全程不用呼叫模型，Telegram / Discord 直接接 |
 | [**openclaw-mem**](https://github.com/phenomenoner/openclaw-mem) | AI 記憶的治理層：每筆記憶有出處、被排除有理由，改壞了退得回去 | 不跟人比 recall 分數，比「說得出為什麼」——同一份記憶、同一個查詢，換個信任政策就給出不同的受控結果，全程有紀錄可查 |
 | [**a2a-superhub**](https://github.com/phenomenoner/a2a-superhub) | 不同框架的 agents 一起做事的協調中樞：任務生命週期、artifacts、共享記憶 | 週一早上你跟 agent A 講的事，週四凌晨 agent B 醒來自己讀到，出處齊全——記憶用 Markdown 存，Obsidian 打得開、git 管得住 |
-| [**hermes-agent-harness-plus**](https://github.com/phenomenoner/hermes-agent-harness-plus) | 長 session 工作的工具箱：任務畫布、證據自動摘要、本地語意搜尋 | 重要發現不再被洗進 scrollback 深處；資料全部留在 127.0.0.1，要動手前都先給你 dry-run 預覽 |
+| [**hermes-agent-harness-plus**](https://github.com/phenomenoner/hermes-agent-harness-plus) | 長時間 AI 工作的隨身筆記本：任務畫布、證據自動摘要、本地語意搜尋 | 跟 AI 工作一整天，早上查到的重點常被下午的對話淹沒——它幫你隨手記下來，之後用問的就找得回來。資料全存在自己電腦，不外傳 |
 | [**neoapi-skill**](https://github.com/phenomenoner/neoapi-skill) | 把富邦 Neo API 的官方文件跟實戰經驗，做成 AI 能照著做的交易工作流程 | 13 條防呆守則、測試/正式環境嚴格分離、附離線文件快照；Codex / Claude / Gemini 都能直接用 |
 | [**steamer-card-engine**](https://github.com/phenomenoner/steamer-card-engine) | 台股當沖策略 runtime：策略卡只表達「想做什麼」，不直接碰券商下單 | 停損、強制平倉、緊急煞車是架構內建不是選配；回放驗證是一級需求，策略改了可以回頭對答案 |
 
